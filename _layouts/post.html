@@ -93,5 +93,7 @@ comments: true
      <!--######################################################## 
                         END RANDOM POSTS SCRIPT        
     ########################################################-->
-  {% include disqus.html %}
+    <div class="comments">
+        {% include disqus.html disqus_identifier=page.disqus_identifier %}
+    </div>
 </article>
