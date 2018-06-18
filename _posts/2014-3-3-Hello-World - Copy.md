@@ -1,6 +1,6 @@
 ---
 layout: post
-title: S*ck the Botch.
+title: TEST.
 featured-image: /images/notch.jpg
 category: tech
 author: Nathan Upchurch

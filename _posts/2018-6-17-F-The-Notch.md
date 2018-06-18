@@ -6,8 +6,8 @@ category: tech
 author: Nathan Upchurch
 excerpt: Why I hate the notch, and you should too.
 ---
-Lorem ipsum dolor amet lumbersexual readymade ramps listicle kitsch edison bulb selfies chambray glossier snackwave pinterest. Keffiyeh normcore venmo beard street art readymade letterpress you probably haven't heard of them. VHS austin cred gastropub mustache tacos XOXO shabby chic paleo palo santo semiotics you probably haven't heard of them put a bird on it. Lomo pop-up vinyl, palo santo raclette freegan whatever humblebrag slow-carb coloring book 3 wolf moon vape street art offal.
-### Why the notch?
+
+
 The predominant argument in favor of the notch is that it affords an increase in screen-space. While struggling with large devices that don't sit comfortably in one hand, consumers are still hungry for increased screen real-estate, leading phone manufacturers racing towards the panacean bezel-less display. The challenges here are many; how do you firmly seal the screen onto the chassis with no bezel? Where do you put the camera? The fingerprint scanner and sensors? Apple's answer to this was to carve out a little nook for the front facing camera and sensors, while leaving unused screen space to the left and right. On paper, it almost looks logical.
 
 ### Why so salty?
