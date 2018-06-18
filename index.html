@@ -9,7 +9,7 @@ spiel: I'm Nathan, and this is my blog. Enjoy your stay.
         {% assign loopindex = forloop.index | modulo: 2 %}
         {% if forloop.first == true %}
             <div class="row">
-               <p>Subscribe: <a href="https://nathanupchurch.com/feed.xml"><i class="fas fa-rss"></i></a></p>
+               <a href="https://nathanupchurch.com/feed.xml"><p>Subscribe:<i class="fas fa-rss"></i></p></a>
                 <article style="background-image: url({{ site.baseurl }}{{ post.featured-image }})" class="post twelve columns wow fadeIn card featured" data-wow-duration=".5s" data-wow-delay=".2s">
                     <a class="cardCover" href="{{ site.baseurl }}{{ post.url }}">
                         <h1>{{ post.title }}</h1>
