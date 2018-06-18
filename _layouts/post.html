@@ -1,17 +1,97 @@
 ---
 layout: default
+comments: true
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
+    <div class="postHeader" style="background-image: url({{ site.baseurl }}{{ page.featured-image }})">
+       <div class="postCover">
+            <div class="postHeaderInfo">
+                <div class="row">
+                    <h1 class="wow fadeIn twelve columns" data-wow-delay=".4s">{{ page.title }}</h1>
+                </div>
+                <div class="row">
+                   <div class="twelve columns">
+                       <p class="postInfo wow fadeIn" data-wow-delay=".6s">{{ page.date | date: "%B %e, %Y" }} | 
+                            {% if post %}
+                                {% assign categories = post.categories %}
+                            {% else %}
+                                {% assign categories = page.categories %}
+                          {% endif %}
+                          {% for category in categories %}
+                          <span><a class="catLink" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a></span>
+                          {% unless forloop.last %}&nbsp;{% endunless %}
+                          {% endfor %}
+                        </p>
+                   </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <div class="entry wow fadeIn" data-wow-delay=".8s">
     {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
+    </div>
+       
+    <!--######################################################## 
+                        RANDOM POSTS SCRIPT
+                        
+        Modified from original script via Thorne Labs: 
+        (https://upchur.ch/2t4oBJl)
+        
+    ########################################################-->
+    
+    <div class="readNext">
+       <h2>Like that article?</h2>
+       <p>Here are some random picks to read next:</p>
+        <script type="text/javascript">
+        
+        var randomIndexUsed = [];
+        var counter = 1;
+        var numberOfPosts = 3; //zero index
+        
+        while (counter < numberOfPosts)
+        {
+            var randomIndex;
+            var postHREF;
+            var postTitle;
+            var postFeaturedImage
+            var PostDate;
+            var postSnippet;
+            function isOdd(value) {
+                if (value%2 != 0)
+                    return true;
+                else
+                    return false;
+            }
+        
+            randomIndex = Math.floor(Math.random() * postsHREF.length);
+        
+            if (randomIndexUsed.indexOf(randomIndex) == "-1")
+            {
+                postHREF = postsHREF[randomIndex];
+                postTitle = postsTitle[randomIndex];
+                postFeaturedImage = postsFeaturedImage[randomIndex];
+                postDate = postsDate[randomIndex];
+                postSnippet = postsSnippet[randomIndex];
+        
+                if (isOdd(counter))
+                {
+                    document.write('<div class="row"><article style="background-image: url(' + postFeaturedImage + ')" class="post six columns wow fadeIn card" data-wow-duration=".5s" data-wow-delay=".2s"><a class="cardCover" href="' + postHREF + '"><h1>' + postTitle + '</h1><p class="entry snippet">' + postSnippet + '</p><div class="cardInfo"><button>Read More</button><p>' + postDate + '</p></div></a></article>');
+                    counter++;
+                }
+                else
+                {
+                    document.write('<article style="background-image: url(' + postFeaturedImage + ')" class="post six columns wow fadeIn card" data-wow-duration=".5s" data-wow-delay=".4s"><a class="cardCover" href="' + postHREF + '"><h1>' + postTitle + '</h1><p class="entry snippet">' + postSnippet + '</p><div class="cardInfo"><button>Read More</button><p>' + postDate + '</p></div></a></article></div>');
+                    counter++;
+                }
+        
+                randomIndexUsed.push(randomIndex);
+            }
+        }
+        </script>
+    </div>
+     <!--######################################################## 
+                        END RANDOM POSTS SCRIPT        
+    ########################################################-->
   {% include disqus.html %}
 </article>

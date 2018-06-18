@@ -1,0 +1,333 @@
+/*##############################################################
+                            MAIN STYLES
+##############################################################*/
+a {
+    text-decoration: none;
+}
+p > a, h4 > a {
+    color: black;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    font-weight: 800;
+}
+a:hover {
+    background-size: 100% 88%;
+    color: black;
+}
+body {
+    height: 100vh;
+    width: auto;
+    padding-top: 2em;
+    background: linear-gradient(135deg, rgba( 144, 211, 243, 0.5 ) 0%, rgba( 132, 219, 210, 0.414 ) 42%, rgba( 26, 101, 172, 0.414 ) 75%), url("/images/patterns/tic-tac-toe.png");
+    background-attachment: fixed;
+}
+button {
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: .5em;
+}
+button:hover {
+    color: rgb(126, 215, 217);
+    border-color: rgb(126, 215, 217);
+}
+.container {
+    background-color: white;
+    -webkit-box-shadow: 0em 0em .2em .2em rgba( 0, 0, 0, 0.1 );
+    box-shadow: 0em 0em .2em .2em rgba( 0, 0, 0, 0.1 );
+}
+.bio, #main {
+    padding: 0em 1em 1em 1em;
+}
+details {
+
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+h4 {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+img {
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+p {
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+mark {
+    -webkit-box-shadow: 0px 0px 0px 5px yellow;
+    box-shadow: 0px 0px 0px 5px yellow;
+    display: inline;
+    line-height: 2;
+    margin: -5px -5px;
+    background-color: yellow;
+    border-radius: 1px;
+}
+.masthead > * {
+    display: inline-block;
+}
+#profilePic {
+    max-width: 15em;
+    display: inline;
+}
+summary {
+    outline: none;
+}
+summary > button {
+    color: black;
+    border-color: black;
+    width: 100%;
+}
+.spiel h1 {
+    margin-bottom: .1em;
+}
+.spiel p {
+    margin-bottom: 1em;
+}
+summary h3 {
+    display: inline;
+}
+
+/*##############################################################
+                            POSTS
+##############################################################*/
+.entry p:first-child::first-letter {
+    font-size: 3em;
+    font-weight: 800;
+    float: left;
+    padding: .2em .1em .1em 0em;
+    margin-bottom: -.25em;
+}
+.loopCount {
+    display: none;
+}
+.postCover {
+    background-color: rgba( 0, 0, 0, 0.5 );
+    color: white;
+    padding: 3em 1em 1em 1em;
+    min-height: 15em;
+}
+.postCover h1 {
+    font-size: 4em;
+    margin-bottom: 0;
+}
+.postCover a {
+    color: white;
+}
+.postHeader {
+    background-size: cover;
+    background-position: center center;
+    margin: -2em -1em 3em -1em;
+    position: relative;
+}
+.postHeaderInfo {
+    position: absolute;
+    bottom: .25em;
+}
+.postInfo {
+    font-size: 1.2rem;
+}
+.readNext {
+    margin: 6em -1em -1em -1em;
+    background-color: #494949;
+    padding: 1em 1em 1em 1em;
+    color: white;
+}
+.readNext h2 {
+    margin-bottom: 0em;
+}
+
+/*##############################################################
+                            NAV
+##############################################################*/
+
+nav {
+    margin: 1em -1em 2em -1em;
+}
+.navButton {
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #494949;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    min-width: 25%;
+    background-size: 100% 0em;
+    background-repeat: no-repeat;
+    background-position: 0 88%;
+    font-weight: 800;
+}
+.navButton:hover:not(.active) {
+    color: black;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-blend-mode: normal;
+    background-size: 100% 100%;
+    background-color: white;
+}
+nav .active {
+    background-color: white;
+    color: black;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-top-style: solid;
+    border-top-color: #6d6d6d;
+    border-top-width: .25em;
+    margin-top: -.5em;
+}
+
+/*##############################################################
+                            CARDS
+##############################################################*/
+.card {
+    margin-bottom: 1em;
+    background-size: cover;
+}
+.card h1 {
+    margin-bottom: .1em;
+    font-weight: 800;
+}
+.card p {
+    font-weight: 300; 
+}
+.cardCover {
+    padding: 1em 1em 5em 1em;
+    min-height: 15em;
+    background-color: rgba( 0, 0, 0, 0.75 );
+    display:block;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: white;
+    position: relative;
+}
+.cardCover:hover {
+    background-color: rgba( 0, 0, 0, 0.35 );
+    color: white;
+}
+.cardInfo {
+    position: absolute;
+    bottom: .25em;
+}
+.cardInfo p {
+    font-size: 1.2rem;
+    margin-bottom: .5em;
+}
+.featured {
+    background-position: center center;
+}
+/*##############################################################
+                            PAGELOADER 
+##############################################################*/
+
+#pageloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; /* center children content horizontally */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; /* center children content vertically */
+    z-index: 10000;
+    background: white;
+}
+#pageloader.dimissloader{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 1s, visibility 0s 1s;
+    transition: opacity 1s, visibility 0s 1s;
+}
+.site-avatar > * {
+    border-style:none;
+    border-radius: 1em;
+    width: 10em;
+}
+.site-description {
+    font-style: italic;
+    color:darkgray;
+}
+html.hidescrollbar{
+    overflow: hidden;
+}
+ 
+html.hidescrollbar body{
+    overflow: hidden;
+}
+
+/* Outro BODY fadeout CSS class */
+
+body.fadeout{
+    opacity: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+/*##############################################################
+                            SPINNER 
+##############################################################*/
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

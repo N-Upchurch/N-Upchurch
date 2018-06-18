@@ -1,18 +1,49 @@
+--- 
+layout: default 
+activeTab: "blog"
+spielTitle: Hi there. 
+spiel: I'm Nathan, and this is my blog. Enjoy your stay.
 ---
-layout: default
----
-
 <div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+    {% for post in site.posts %}
+        {% assign loopindex = forloop.index | modulo: 2 %}
+        {% if forloop.first == true %}
+            <div class="row">
+                <article style="background-image: url({{ site.baseurl }}{{ post.featured-image }})" class="post twelve columns wow fadeIn card featured" data-wow-duration=".5s" data-wow-delay=".2s">
+                    <a class="cardCover" href="{{ site.baseurl }}{{ post.url }}">
+                        <h1>{{ post.title }}</h1>
+                        <p class="entry snippet">{{ post.excerpt }}</p>
+                        <div class="cardInfo">
+                            <button>Read More</button>
+                            <p>{{ post.date | date: '%B %d, %Y' }}</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        {% elsif loopindex == 0 %}
+            <div class="row">
+                <article style="background-image: url({{ site.baseurl }}{{ post.featured-image }})" class="post six columns wow fadeIn card" data-wow-duration=".5s" data-wow-delay=".4s">
+                    <a class="cardCover" href="{{ site.baseurl }}{{ post.url }}">
+                        <h1>{{ post.title }}</h1>
+                        <p class="entry snippet">{{ post.excerpt }}</p>
+                        <div class="cardInfo">
+                            <button>Read More</button>
+                            <p>{{ post.date | date: '%B %d, %Y' }}</p>
+                        </div>
+                    </a>
+                </article>
+        {% else %}
+                <article style="background-image: url({{ site.baseurl }}{{ post.featured-image }})" class="post six columns wow fadeIn card" data-wow-duration=".5s" data-wow-delay=".6s">
+                    <a class="cardCover" href="{{ site.baseurl }}{{ post.url }}">
+                        <h1>{{ post.title }}</h1>
+                        <p class="entry snippet">{{ post.excerpt }}</p>
+                        <div class="cardInfo">
+                            <button>Read More</button>
+                            <p>{{ post.date | date: '%B %d, %Y' }}</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>

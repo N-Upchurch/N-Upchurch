@@ -1,51 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
     {% include meta.html %}
-
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/animate.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600,800&amp;subset=latin-ext" rel="stylesheet"> 
+    <script type="text/javascript" src="{{ site.baseurl }}/js/tabs.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/loadTimer.js"></script>
+    <!--######################################################## 
+                        RANDOM POSTS SCRIPT
+                        
+        Modified from original script via Thorne Labs: 
+        (https://upchur.ch/2t4oBJl)
+        
+    ########################################################-->
+    <script type="text/javascript">
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+    var postsHREF = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
+    var postsTitle = [{% for post in site.posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+    
+    var postsFeaturedImage = [{% for post in site.posts %}"{{ site.baseurl }}{{ post.featured-image }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+        
+    var postsDate = [{% for post in site.posts %}"{{ post.date | date: '%B %d, %Y' }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+    
+    var postsSnippet = [{% for post in site.posts %}"{{ post.excerpt }}"{% unless forloop.last %},{% endunless %}{% endfor %}];    
+    
+    </script>
+    <!--######################################################## 
+                        END RANDOM POSTS SCRIPT        
+    ########################################################-->
+    
+    <!--######################################################## 
+                    Site Created with Jekyll Now:
+                    https://upchur.ch/2M0b902        
+    ########################################################-->
+</head>
+<body>
+   
+    <!--######################################################## 
+                        PAGE TRANSITION
+                        
+        Many thanks to javascriptkit.com for their page
+        transition tutorial:(upchur.ch/2JLeCm1), 
+        and thanks to @tobiasahlin for spinkit. (upchur.ch/2JI7ZR2)
+        
+    ########################################################-->
+    
+    <div id="pageloader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
     </div>
-
+    
+    <!--######################################################## 
+                        END PAGE TRANSITION 
+    ########################################################-->
+    <div class="spiel">
+        <div class="row">
+            <div class="twelve columns">
+                <h1>{{ page.spielTitle }}</h1>
+                <p>{{ page.spiel }}</p>
+            </div>
+        </div>
+    </div>
     <div id="main" role="main" class="container">
-      {{ content }}
+       {% include nav.html %}
+       {{ content }}
+        <div class="wrapper-footer">
+                <footer class="footer">
+                    {% include svg-icons.html %}
+                </footer>
+        </div>
     </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
     {% include analytics.html %}
-  </body>
+    <!-- WOW.js load on scroll-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js">   </script><script>new WOW().init();</script>
+    
+    <!--######################################################## 
+                        ACTIVE TAB TOGGLER 
+    ########################################################-->
+    
+    <script>
+        var atab = document.querySelector('meta[name="activeTab"]');
+        var active = atab && atab.getAttribute("content");
+        console.log(active);
+        activeTab(active);
+    </script>
+    
+    <!--######################################################## 
+                        END ACTIVE TAB TOGGLER 
+    ########################################################-->
+</body>
 </html>
