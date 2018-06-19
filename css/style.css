@@ -43,8 +43,8 @@ button:hover {
 .bio, #main {
     padding: 0em 1em 1em 1em;
 }
-details {
-
+details summary::-webkit-details-marker {
+  display:none;
 }
 h1 {
     font-size: 4rem;
