@@ -3,7 +3,7 @@ layout: post
 featured-image: /images/insung-yoon-5DOHuq-2yIk-unsplash.jpg
 category: design
 author: Nathan Upchurch
-excerpt: Throughout my career, I've noticed small business owners making a similar mistake; commissioning a design for a brochure is an entirely different matter than paying someone to make your brochure.
+excerpt: ...commissioning a design for a brochure is an entirely different matter than paying someone to make your brochure.
 ---
 
 # What Do you Pay your Design Team for, Exactly? 
