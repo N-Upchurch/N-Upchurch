@@ -23,10 +23,10 @@ The trick to extracting the greatest return on investment from your design team,
 
 Don't tell me this: 
 
-```"I want a(n) [ITEM] with a(n) [ELEMENT] at [LOCATION]."``` 
+"I want a(n) [ITEM] with a(n) [ELEMENT] at [LOCATION]."
 
 Instead, tell me this: 
 
-```"I want [DEMOGRAPHIC] in [INDUSTRY] to do [ACTION] when [CIRCUMSTANCE]." ```
+"I want [DEMOGRAPHIC] in [INDUSTRY] to do [ACTION] when [CIRCUMSTANCE]." 
 
 Now I'm in no way saying that business owners shouldn't have input into the process. You know your organization and its goals better than anyone. Just pay attention to where you place your input; is it relevant to the bigger picture, your brand, or a larger goal? When I hear feedback or objections relating to a piece I'm working on for a client, I always try to interpret what it is that they're truly asking for. Designers will sometimes miss things that are important to you, and this is where the client-designer relationship really bears fruit. Sometimes "make the logo bigger" is unfounded micro-management, but often it means something like "I don't feel that our branding is clear enough to leads who haven't heard of our company, and I'd like our logo to have a chance to really stick in their memory." The real value in a designer is that they'll tell you when the former is the case, especially if it may hurt the objective of the piece, and they'll hear you and adjust when the latter is true. The cycle of feedback here is critical, and when the relationship is in balance, it really comes to form a delicate dance that produces beautiful, and tangible results. So the next time you speak to your design team, remember what it is that you're paying for. Ask for solutions, and that's what you'll receive.
