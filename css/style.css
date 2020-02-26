@@ -12,7 +12,7 @@ p > a, h4 > a {
     background-position: 0 88%;
     -webkit-transition: all 0.15s ease-in;
     transition: all 0.15s ease-in;
-    font-weight: 800;
+    font-weight: 600;
 }
 a:hover {
     background-size: 100% 88%;
@@ -39,28 +39,40 @@ button:hover {
     background-color: white;
     -webkit-box-shadow: 0em 0em .2em .2em rgba( 0, 0, 0, 0.1 );
     box-shadow: 0em 0em .2em .2em rgba( 0, 0, 0, 0.1 );
+    margin-bottom: -1em;
+    padding-bottom: 0em;
 }
 .bio, #main {
-    padding: 0em 1em 1em 1em;
+    padding: 0em 1em 0em 1em;
 }
-details summary::-webkit-details-marker {
-  display:none;
+.footer {
+    background-color: #303030;
+    color: white;
+    margin: 0em -1em 0em -1em;
+    padding: 1em 1em 1em 1em;
+}
+.footer p a {
+    color: white;
 }
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 800;
+    margin: 1.5em auto 2em auto;
 }
 h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 2em auto 2em auto;
+
 }
 h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
+    margin: 2em auto 2em auto;
 }
 h4 {
-    font-size: 1.75rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 600;
 }
 img {
     max-width: 100%;
@@ -68,8 +80,8 @@ img {
     box-sizing: border-box;
 }
 p {
-    font-size: 1.75rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 400;
 }
 mark {
     -webkit-box-shadow: 0px 0px 0px 5px yellow;
@@ -115,6 +127,9 @@ summary h3 {
     padding: .2em .1em .1em 0em;
     margin-bottom: -.25em;
 }
+.entry {
+    margin: 1em 2em 1em 2em;
+}
 .loopCount {
     display: none;
 }
@@ -146,12 +161,7 @@ summary h3 {
 }
 .readNext {
     margin: 6em -1em 1em -1em;
-    background-color: #494949;
     padding: 1em 1em 1em 1em;
-    color: white;
-}
-.readNext h2 {
-    margin-bottom: 0em;
 }
 
 /*##############################################################
@@ -174,7 +184,8 @@ nav {
     background-size: 100% 0em;
     background-repeat: no-repeat;
     background-position: 0 88%;
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 1.75rem;
 }
 .navButton:hover:not(.active) {
     color: black;
@@ -199,7 +210,7 @@ nav .active {
                             CARDS
 ##############################################################*/
 .card {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     background-size: cover;
 }
 .card h1 {
@@ -208,6 +219,7 @@ nav .active {
 }
 .card p {
     font-weight: 300; 
+    margin: auto;
 }
 .cardCover {
     padding: 1em 1em 5em 1em;

@@ -14,8 +14,13 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600,800&amp;subset=latin-ext" rel="stylesheet">
     <link href='https://nathanupchurch.com/feed.xml' rel='alternate' type='application/atom+xml'>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="{{ site.baseurl }}/js/jquery-3.3.1.min.js"><\/script>'))
+    </script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/tabs.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/loadTimer.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.jscroll.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon_package_v0.16/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon_package_v0.16/favicon-16x16.png">
@@ -75,7 +80,11 @@
     <!--######################################################## 
                         END PAGE TRANSITION 
     ########################################################-->
-    <div class="spiel">
+    
+ <!--Below places a title and remark above the navigation a la "spielTitle" & "spiel" in page front-matter.-->
+ 
+<!--   
+   <div class="spiel">
         <div class="row">
             <div class="twelve columns">
                 <h1>{{ page.spielTitle }}</h1>
@@ -83,9 +92,11 @@
             </div>
         </div>
     </div>
+-->
     <div id="main" role="main" class="container">
        {% include nav.html %}
        {{ content }}
+<!--   {% include footer.html %} -->
     </div>
     {% include analytics.html %}
     <!-- WOW.js load on scroll-->
@@ -106,5 +117,6 @@
                         END ACTIVE TAB TOGGLER 
     ########################################################-->
     <script id="dsq-count-scr" src="//nathanupchurch-com.disqus.com/count.js" async></script>
+    <script>$('#year').html(new Date().getFullYear());</script>
 </body>
 </html>

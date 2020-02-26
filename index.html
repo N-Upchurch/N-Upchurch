@@ -4,9 +4,11 @@ activeTab: "blog"
 spielTitle: Hi there. 
 spiel: I'm Nathan, and this is my blog. Enjoy your stay.
 ---
+<a name="top"></a>
+<h1>The latest spicy discourse,<br> hot off the keyboard.</h1>
 <p><a href="https://nathanupchurch.com/feed.xml"><span>Subscribe: <i class="fas fa-rss"></i></span></a></p>
 <div class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
         {% assign loopindex = forloop.index | modulo: 2 %}
         {% if forloop.first == true %}
             <div class="row">
@@ -47,4 +49,47 @@ spiel: I'm Nathan, and this is my blog. Enjoy your stay.
             </div>
         {% endif %}
     {% endfor %}
+    <!--######################################################## 
+                        PAGINATION NAV        
+    ########################################################-->
+    <!-- render pagination links if there are more than one pages -->
+    {% if paginator.total_pages > 1 %}
+        <div class="pagination">    
+            {% if paginator.previous_page %}
+                <!-- special case the second page to link back to index.html -->
+                {% if paginator.page == 2 %}
+                    <a href="/"><i class="fas fa-caret-left"></i> Prev</a>
+                {% else %}
+                    <a href="/page/"><i class="fas fa-caret-left"></i> Prev</a>
+                {% endif %}    
+            {% else %}
+            <!-- if no 'previous' pages exit, render a span rather than an anchor -->
+                <span><i class="fas fa-caret-left"></i> Prev</span>
+            {% endif %}
+        
+            {% if paginator.next_page %}    
+                <a class='next' href="{{ paginator.next_page_path }}">Next <i class="fas fa-caret-right"></i></a>
+            {% else %}
+            <!-- if no 'next' pages exit, render a span rather than an anchor -->
+                <span class='next'>Next <i class="fas fa-caret-right"></i></span>
+            {% endif %}
+        </div>
+    {% endif %}
+    <!--######################################################## 
+                        END PAGINATION NAV        
+    ########################################################-->
 </div>
+    <!--######################################################## 
+                            JSCROLL 
+    ########################################################-->   
+    <script type="text/javascript">
+        $(function() {    
+            $('.posts').jscroll({
+                contentSelector: ".posts",
+                nextSelector: '.next'
+            });
+        });
+    </script>
+    <!--######################################################## 
+                            END JSCROLL 
+    ########################################################-->   
