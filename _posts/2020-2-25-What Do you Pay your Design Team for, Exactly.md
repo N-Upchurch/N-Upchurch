@@ -2,11 +2,10 @@
 layout: post
 featured-image: /images/insung-yoon-5DOHuq-2yIk-unsplash.jpg
 category: design
+title: What Do you Pay your Design Team for, Exactly? 
 author: Nathan Upchurch
 excerpt: ...commissioning a design for a brochure is an entirely different matter than paying someone to make your brochure.
 ---
-
-# What Do you Pay your Design Team for, Exactly? 
 
 When faced with the visual communications of a blue-chip company, it's hard to miss that you're seeing deep pockets. Five years ago, had you asked me what Deloitte was, I wouldn't have been able to tell you that they were one of the largest accountancy firms in the world. If you handed me a piece of their marketing collateral, or pointed me to their website, however, I could have told you that they *meant business.* 
 

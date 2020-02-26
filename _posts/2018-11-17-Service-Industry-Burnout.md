@@ -4,7 +4,7 @@ title: Your Server is Burnt-Out, and it's Killing Them.
 featured-image: /images/joshua-rodriguez-422768-unsplash.jpg
 category: foodservice, in the workplace
 author: Nathan Upchurch
-excerpt: ?????????????????????
+excerpt:  "HANDS! I NEED HANDS!"
 ---
 ### Saturday Night, 10:00 PM
 
